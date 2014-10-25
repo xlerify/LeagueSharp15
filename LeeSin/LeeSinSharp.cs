@@ -45,7 +45,7 @@ namespace LeeSinSharp
             if (ObjectManager.Player.ChampionName != CharName) return;
             map = new Map();
 
-            Game.PrintChat("LeeSin");
+            Game.PrintChat("HuyNK- Pro LeeSin");
 
             try
             {
@@ -58,32 +58,32 @@ namespace LeeSinSharp
                 Config.AddSubMenu(new Menu("Orbwalker", "Orbwalker"));
                 LeeSin.orbwalker = new Orbwalking.Orbwalker(Config.SubMenu("Orbwalker"));
                 Config.AddSubMenu(new Menu("Combo", "Combo"));
-                Config.SubMenu("Combo").AddItem(new MenuItem("UseQCombo", "Use Q")).SetValue(true);
-                Config.SubMenu("Combo").AddItem(new MenuItem("UseECombo", "Use E")).SetValue(true);
-                Config.SubMenu("Combo").AddItem(new MenuItem("UseRCombo", "Use R")).SetValue(true);
-                Config.SubMenu("Combo").AddItem(new MenuItem("ActiveCombo", "Combo!").SetValue(new KeyBind(32, KeyBindType.Press)));
-                Config.SubMenu("Combo").AddItem(new MenuItem("ActiveCombo1", "Combo2!").SetValue((new KeyBind("Z".ToCharArray()[0], KeyBindType.Press, false))));
+                Config.SubMenu("Combo").AddItem(new MenuItem("UseQCombo", "Dung Q")).SetValue(true);
+                Config.SubMenu("Combo").AddItem(new MenuItem("UseECombo", "Dung E")).SetValue(true);
+                Config.SubMenu("Combo").AddItem(new MenuItem("UseRCombo", "Dung R")).SetValue(true);
+                Config.SubMenu("Combo").AddItem(new MenuItem("ActiveCombo", "QQEER!").SetValue(new KeyBind(32, KeyBindType.Press)));
+                Config.SubMenu("Combo").AddItem(new MenuItem("ActiveCombo1", "QERQE!").SetValue((new KeyBind("S".ToCharArray()[0], KeyBindType.Press, false))));
 
                 Config.AddSubMenu(new Menu("Harass", "Harass"));
-                Config.SubMenu("Harass").AddItem(new MenuItem("ActiveHarass", "Harass!").SetValue((new KeyBind("C".ToCharArray()[0], KeyBindType.Press, false))));
+                Config.SubMenu("Harass").AddItem(new MenuItem("ActiveHarass", "Ria mau!").SetValue((new KeyBind("C".ToCharArray()[0], KeyBindType.Press, false))));
 
                 Config.AddSubMenu(new Menu("Insec", "Insec"));
                 Config.SubMenu("Insec").AddItem(new MenuItem("ActiveInsec", "Insec!").SetValue((new KeyBind("T".ToCharArray()[0], KeyBindType.Press, false))));
                 
                 Config.AddSubMenu(new Menu("KillSteal", "KillSteal"));
-                Config.SubMenu("KillSteal").AddItem(new MenuItem("UseR", "R killsteal")).SetValue(true);
+                Config.SubMenu("KillSteal").AddItem(new MenuItem("UseR", "Ks Bang Ulti")).SetValue(true);
 
                 Config.AddSubMenu(new Menu("WardJump", "WardJump"));
-                Config.SubMenu("WardJump").AddItem(new MenuItem("ActiveWard", "WardJump!").SetValue((new KeyBind("G".ToCharArray()[0], KeyBindType.Press, false))));
+                Config.SubMenu("WardJump").AddItem(new MenuItem("ActiveWard", "Luot bang W").SetValue((new KeyBind("G".ToCharArray()[0], KeyBindType.Press, false))));
                 
                 Config.AddSubMenu(new Menu("Drawings", "Drawings"));
                 Config.SubMenu("Drawings").AddItem(new MenuItem("DrawQ", "Draw Q")).SetValue(true);
                 Config.SubMenu("Drawings").AddItem(new MenuItem("DrawE", "Draw E")).SetValue(true);
                 Config.SubMenu("Drawings").AddItem(new MenuItem("DrawW", "Draw W")).SetValue(true);
                 Config.SubMenu("Drawings").AddItem(new MenuItem("DrawR", "Draw R")).SetValue(true);
-                Config.SubMenu("Drawings").AddItem(new MenuItem("DrawInsec", "Draw Insec")).SetValue(true);
-                Config.SubMenu("Drawings").AddItem(new MenuItem("CircleQuality", "Circles Quality").SetValue(new Slider(100, 100, 10)));
-                Config.SubMenu("Drawings").AddItem(new MenuItem("CircleThickness", "Circles Thickness").SetValue(new Slider(1, 10, 1)));
+                Config.SubMenu("Drawings").AddItem(new MenuItem("DrawInsec", "Duong Insec")).SetValue(true);
+                Config.SubMenu("Drawings").AddItem(new MenuItem("CircleQuality", "Vong tron").SetValue(new Slider(100, 100, 10)));
+                Config.SubMenu("Drawings").AddItem(new MenuItem("CircleThickness", "Vong tron day").SetValue(new Slider(1, 10, 1)));
                 Config.AddToMainMenu();
                 Drawing.OnDraw += onDraw;
                 Game.OnGameUpdate += OnGameUpdate;
